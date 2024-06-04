@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".splashscreen.SplashScreen">
+
+
+
+    <!-- Top Banner -->
+    <RelativeLayout
+        android:id="@+id/top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#143f66">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/top_banner"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtverification"
+        android:gravity="center"
+        android:text="OTP Verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinmedium26"/>
+
+
+
+    <TextView
+        android:id="@+id/txtOtp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/txtverification"
+        android:text="A one time password will be sent to this \nmobile number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_below="@+id/txtOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your phone number"
+        android:layout_marginTop="26dp"
+        style="@style/groupStylecornerRadius_3"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_below="@+id/etNumber"
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Get OTP"
+            android:gravity="center"
+            android:layout_marginTop="26dp"
+            style="@style/txtbuttonpoppinsmidum20"/>
+
+        <TextView
+            android:id="@+id/signuptxt"
+            android:layout_below="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not have account? Sign Up"
+            android:layout_marginTop="36dp"
+            style="@style/txtpoppinsRegular12"/>
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/signuptxt"
+            android:layout_marginTop="36dp"
+            android:id="@+id/forview"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="175dp"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:layout_height="1dp"/>
+
+
+            <TextView
+                android:text="OR"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginStart="5dp"
+                android:layout_width="175dp"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/forview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="36dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_google_logo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook_logo"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
