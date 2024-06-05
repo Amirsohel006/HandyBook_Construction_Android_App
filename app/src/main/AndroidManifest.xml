@@ -13,8 +13,21 @@
         android:theme="@style/Theme.HandyBook_Construction_Android_App"
         tools:targetApi="31">
         <activity
+            android:name=".homecontainer.HomeContainer"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".signupactivity.SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".otpactivity.OTPActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name=".loginscreen.LoginScreenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".splashscreen.SplashScreen"
             android:exported="true"
@@ -29,7 +42,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.HandyBook_Construction_Android_App"></activity>
+            android:theme="@style/Theme.HandyBook_Construction_Android_App" />
     </application>
 
 </manifest>
