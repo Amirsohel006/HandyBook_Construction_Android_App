@@ -36,52 +36,79 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtverification"
-        android:gravity="center"
-        android:text="OTP Verification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/txtpoppinmedium26"/>
+        <TextView
+            android:id="@+id/txtverification"
+            android:gravity="center"
+            android:text="OTP Verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/txtpoppinmedium26"/>
 
 
 
-    <TextView
-        android:id="@+id/txtOtp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        style="@style/txtpoppinregular12"
-        android:layout_below="@+id/txtverification"
-        android:text="A one time password will be sent to this \nmobile number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txtOtp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            style="@style/txtpoppinregular12"
+            android:layout_below="@+id/txtverification"
+            android:text="Enter the OTP send to +917829636252"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 
 
-    <EditText
-        android:id="@+id/etNumber"
-        android:layout_below="@+id/txtOtp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your phone number"
-        android:layout_marginTop="26dp"
-        style="@style/groupStylecornerRadius_3"/>
+        <LinearLayout
+            android:id="@+id/forotpedittext"
+            android:layout_below="@+id/txtOtp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            style="@style/groupStylecornerRadius_3"/>
+
+            <EditText
+                android:id="@+id/etNumber1"
+                android:layout_marginStart="15dp"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                style="@style/groupStylecornerRadius_3"/>
+            <EditText
+                android:id="@+id/etNumber2"
+                android:layout_width="65dp"
+                android:layout_marginStart="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                style="@style/groupStylecornerRadius_3"/>
+            <EditText
+                android:id="@+id/etNumber3"
+                android:layout_width="65dp"
+                android:layout_marginStart="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                style="@style/groupStylecornerRadius_3"/>
+        </LinearLayout>
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_below="@+id/etNumber"
-            android:id="@+id/loginButton"
+            android:layout_below="@+id/forotpedittext"
+            android:id="@+id/verifyButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Get OTP"
+            android:text="Verify"
             android:gravity="center"
             android:layout_marginTop="26dp"
             style="@style/txtbuttonpoppinsmidum20"/>
 
         <TextView
             android:id="@+id/signuptxt"
-            android:layout_below="@+id/loginButton"
+            android:layout_below="@+id/verifyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Not have account? Sign Up"

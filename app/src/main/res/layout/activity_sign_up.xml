@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signupactivity.SignUpActivity">
+
+
+    <RelativeLayout
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sign_uptext"
+        android:text="Sign Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinsemibold28"/>
+
+        
+        <TextView
+            android:id="@+id/create_txt"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/sign_uptext"
+            android:text="Create Account"
+            style="@style/txtpoppinmeium18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/for_name"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/create_txt"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/etname"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:layout_marginTop="26dp"
+                style="@style/groupStylecornerRadius_3"/>
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="174dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:layout_marginTop="26dp"
+                style="@style/groupStylecornerRadius_3"/>
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etemail"
+            android:layout_below="@+id/for_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email"
+            android:layout_marginTop="26dp"
+            style="@style/groupStylecornerRadius_3"/>
+
+
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_below="@+id/etemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone NUmber"
+            android:layout_marginTop="26dp"
+            style="@style/groupStylecornerRadius_3"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_below="@+id/etPhone"
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Signup"
+            android:gravity="center"
+            android:layout_marginTop="26dp"
+            style="@style/txtbuttonpoppinsmidum20"/>
+
+
+
+        <TextView
+            android:id="@+id/signuptxt"
+            android:layout_below="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Registered? Login"
+            android:layout_marginTop="16dp"
+            style="@style/txtpoppinregular12"/>
+
+
+        <LinearLayout
+            android:layout_below="@+id/signuptxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="36dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_google_logo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook_logo"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
