@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_width="180dp"
+        android:layout_height="160dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:src="@drawable/listing_image"/>
+
+
+        <TextView
+            style="@style/txtpoppinsemibold8"
+            android:layout_marginTop="124dp"
+            android:text="Age Group Architects "
+            android:layout_width="match_parent"
+            android:drawableEnd="@drawable/fav_icon"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            style="@style/txtpoppinsemibold8"
+            android:layout_marginTop="138dp"
+            android:text="300,SANKARAN COMPLEX, LANGFORD ROAD"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/icon_location"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

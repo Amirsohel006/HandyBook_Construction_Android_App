@@ -7,7 +7,11 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.category_fragment.Category_Fragment
+import com.example.handybook_construction_android_app.eventsfragment.EventFragment
 import com.example.handybook_construction_android_app.home_fragment.Home_Fragment
+import com.example.handybook_construction_android_app.professional_fragment.ProfessionalFragment
+import com.example.handybook_construction_android_app.proffesionaldetailsfragment.ProffessionalsDetailsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeContainer : AppCompatActivity() {
@@ -29,20 +33,25 @@ class HomeContainer : AppCompatActivity() {
                     true
                 }
 
-//                R.id.attendance -> {
-//                    replaceFragment(AttendanceFragment())
-//                    true
-//                }
+                R.id.categotries -> {
+                    replaceFragment(Category_Fragment())
+                    true
+                }
 //
-//                R.id.report -> {
-//                    replaceFragment(ReportFragment())
-//                    true
-//                }
+                R.id.proessionals -> {
+                    replaceFragment(ProfessionalFragment())
+                    true
+                }
 //
-//                R.id.account -> {
-//                    replaceFragment(ProfileFragment())
-//                    true
-//                }
+                R.id.events -> {
+                    replaceFragment(EventFragment())
+                    true
+                }
+
+                R.id.books -> {
+                    replaceFragment(ProffessionalsDetailsFragment())
+                    true
+                }
 
                 else -> {
                     TODO("Hello")
