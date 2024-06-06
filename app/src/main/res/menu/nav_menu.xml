@@ -19,9 +19,9 @@
         android:title="Professionals" />
 
     <item
-        android:id="@+id/mycart"
-        android:icon="@drawable/cart_icon"
-        android:title="My Cart" />
+        android:id="@+id/events"
+        android:icon="@drawable/icon_events"
+        android:title="Events" />
 
     <item
         android:id="@+id/books"
