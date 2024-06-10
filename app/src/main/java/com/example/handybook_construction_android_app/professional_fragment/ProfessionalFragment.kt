@@ -1,16 +1,22 @@
 package com.example.handybook_construction_android_app.professional_fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.filter_category_fragment.Filter_Category_Activity
+import com.example.handybook_construction_android_app.filter_fragment.FilterActivity
 import com.example.handybook_construction_android_app.home_fragment.NewListingAdapter
+import com.example.handybook_construction_android_app.location_fragment.CompleteLocationActivity
+import kotlin.io.path.fileVisitor
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,6 +55,25 @@ class ProfessionalFragment : Fragment() {
             // Attach LinearSnapHelper
             val snapHelper = LinearSnapHelper()
             snapHelper.attachToRecyclerView(recyclerView)
+
+            val filter_layout=findViewById<RelativeLayout>(R.id.filter_id)
+             filter_layout.setOnClickListener {
+                 val i=Intent(requireActivity(),FilterActivity::class.java)
+                 startActivity(i)
+             }
+
+
+            val location_layout=findViewById<RelativeLayout>(R.id.location_id)
+            location_layout.setOnClickListener {
+                val i=Intent(requireActivity(),CompleteLocationActivity::class.java)
+                startActivity(i)
+            }
+
+            val category_layout=findViewById<RelativeLayout>(R.id.professional_id)
+            category_layout.setOnClickListener {
+                val i=Intent(requireActivity(),Filter_Category_Activity::class.java)
+                startActivity(i)
+            }
         }
     }
 

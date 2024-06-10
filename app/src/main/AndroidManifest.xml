@@ -13,9 +13,21 @@
         android:theme="@style/Theme.HandyBook_Construction_Android_App"
         tools:targetApi="31">
         <activity
-            android:name=".homecontainer.HomeContainer"
+            android:name=".filter_category_fragment.Filter_Category_Activity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".location_fragment.CompleteLocationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".filter_fragment.FilterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".homecontainer.HomeContainer"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".signupactivity.SignUpActivity"
             android:exported="false"

@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_my_order"
+        android:icon="@drawable/ic_order"
+        android:title="My Orders" />
+    <item
+        android:id="@+id/nav_my_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="My Cart" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_favriotes"
+        android:title="Favorite" />
+    <item
+        android:id="@+id/nav_change_address"
+        android:icon="@drawable/ic_address"
+        android:title="Change Address" />
+    <item
+        android:id="@+id/nav_referells"
+        android:icon="@drawable/ic_referrals"
+        android:title="Referrals" />
+    <item
+        android:id="@+id/nav_help_and_faq"
+        android:icon="@drawable/ic_help"
+        android:title="Help &amp; Faq" />
+
+    <item
+        android:id="@+id/nav_privacy_policy"
+        android:icon="@drawable/ic_policy"
+        android:title="Privacy Policy" />
+
+
+    <item
+        android:id="@+id/nav_about_us"
+        android:icon="@drawable/ic_about"
+        android:title="About Us" />
+</menu>

@@ -4,8 +4,12 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.example.handybook_construction_android_app.R
 import com.example.handybook_construction_android_app.category_fragment.Category_Fragment
 import com.example.handybook_construction_android_app.eventsfragment.EventFragment
@@ -13,17 +17,49 @@ import com.example.handybook_construction_android_app.home_fragment.Home_Fragmen
 import com.example.handybook_construction_android_app.professional_fragment.ProfessionalFragment
 import com.example.handybook_construction_android_app.proffesionaldetailsfragment.ProffessionalsDetailsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 class HomeContainer : AppCompatActivity() {
 
     private lateinit var frameBottomBar: BottomNavigationView
+    private lateinit var drawerLayout: DrawerLayout
+
+    private lateinit var navigationView: NavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_container)
 
+
+        drawerLayout=findViewById(R.id.drawerlayout)
+
+        navigationView=findViewById(R.id.navigationView)
         frameBottomBar = findViewById(R.id.frameBottombar)
 
+        navigationView.itemIconTintList=null
         replaceFragment(Home_Fragment())
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navHostFagment) as NavHostFragment?
+
+
+        // Check if navHostFragment is null
+        if (navHostFragment == null) {
+            Log.e("HomeContainer", "NavHostFragment is null")
+            return
+        }
+
+        val navController = navHostFragment!!.navController
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            Log.d("NavController", "Navigated to ${destination.label}")
+        }
+
+
+        NavigationUI.setupWithNavController(navigationView,navController)
+
+
+        NavigationUI.setupWithNavController(frameBottomBar, navController)
 
         frameBottomBar.setOnNavigationItemSelectedListener {it ->
             when(it.itemId){
