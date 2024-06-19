@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_order"
+    app:startDestination="@id/order_fragment">
+
+
+    <fragment
+        android:id="@+id/order_fragment"
+        android:name="com.example.handybook_construction_android_app.orders_fragment.OrdersFragment"
+        android:label="LocationFragment"
+        tools:layout="@layout/fragment_orders"/>
+
+</navigation>

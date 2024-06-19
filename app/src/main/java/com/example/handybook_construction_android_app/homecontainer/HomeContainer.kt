@@ -2,6 +2,7 @@ package com.example.handybook_construction_android_app.homecontainer
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +15,7 @@ import com.example.handybook_construction_android_app.R
 import com.example.handybook_construction_android_app.category_fragment.Category_Fragment
 import com.example.handybook_construction_android_app.eventsfragment.EventFragment
 import com.example.handybook_construction_android_app.home_fragment.Home_Fragment
+import com.example.handybook_construction_android_app.orders_fragment.OrderActivity
 import com.example.handybook_construction_android_app.professional_fragment.ProfessionalFragment
 import com.example.handybook_construction_android_app.proffesionaldetailsfragment.ProffessionalsDetailsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -37,17 +39,11 @@ class HomeContainer : AppCompatActivity() {
         frameBottomBar = findViewById(R.id.frameBottombar)
 
         navigationView.itemIconTintList=null
+
         replaceFragment(Home_Fragment())
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navHostFagment) as NavHostFragment?
-
-
-        // Check if navHostFragment is null
-        if (navHostFragment == null) {
-            Log.e("HomeContainer", "NavHostFragment is null")
-            return
-        }
 
         val navController = navHostFragment!!.navController
 
@@ -61,6 +57,7 @@ class HomeContainer : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(frameBottomBar, navController)
 
+
         frameBottomBar.setOnNavigationItemSelectedListener {it ->
             when(it.itemId){
 
@@ -72,6 +69,7 @@ class HomeContainer : AppCompatActivity() {
                 R.id.categotries -> {
                     replaceFragment(Category_Fragment())
                     true
+
                 }
 //
                 R.id.proessionals -> {
@@ -95,6 +93,18 @@ class HomeContainer : AppCompatActivity() {
             }
 
         }
+
+
+        navigationView.setNavigationItemSelectedListener{item->
+            when(item.itemId){
+                R.id.nav_my_order->{
+                    startActivity(Intent(this,OrderActivity::class.java))
+                }
+            }
+            drawerLayout.closeDrawers()
+            true
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -139,9 +149,10 @@ class HomeContainer : AppCompatActivity() {
                 selectedFragment?.let {
                     when (it) {
                         is Home_Fragment -> frameBottomBar.selectedItemId = R.id.home
-//                        is AttendanceFragment -> frameBottomBar.selectedItemId = R.id.attendance
-//                        is ReportFragment -> frameBottomBar.selectedItemId = R.id.report
-//                        is ProfileFragment -> frameBottomBar.selectedItemId = R.id.account
+                        is Category_Fragment -> frameBottomBar.selectedItemId = R.id.categotries
+                        is ProfessionalFragment -> frameBottomBar.selectedItemId = R.id.proessionals
+                        is EventFragment -> frameBottomBar.selectedItemId = R.id.events
+                        is ProffessionalsDetailsFragment -> frameBottomBar.selectedItemId = R.id.books
                     }
                 } ?: super.onBackPressed()
             } else {
