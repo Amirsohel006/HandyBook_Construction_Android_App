@@ -13,71 +13,68 @@
         android:theme="@style/Theme.HandyBook_Construction_Android_App"
         tools:targetApi="31">
         <activity
+            android:name=".ui.addressactivity.ChangeAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.trackorderactivity.TrackOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.notificationactivity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.cartactivty.CartActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.helpeaqsactivity.HelpEAQsActivity"
             android:exported="false" />
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".ui.editprofileactivity.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".ui.privacypolicyactivity.PrivacyPolicyActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.favoriteacitivity.FavoriteActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.filterActivity.FiltersActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.book_an_appointment_activity.BookAnAppointmentActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.referrals.ReferralsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.aboutusactivity.AboutUsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.orders_fragment.OrderActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.filter_category_fragment.Filter_Category_Activity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.location_fragment.CompleteLocationActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.filter_fragment.FilterActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.homecontainer.HomeContainer"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.signupactivity.SignUpActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.otpactivity.OTPActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.loginscreen.LoginScreenActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreen"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

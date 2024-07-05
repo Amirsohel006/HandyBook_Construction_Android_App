@@ -2,19 +2,22 @@ package com.example.handybook_construction_android_app.ui.home_fragment
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.handybook_construction_android_app.controller.DrawerController
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.controller.DrawerController
+import com.example.handybook_construction_android_app.controller.HomeCardClickController
 
 class Home_Fragment : Fragment() {
     private var drawerController: DrawerController? = null
+    private var onItemClickListener: HomeCardClickController? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -22,6 +25,11 @@ class Home_Fragment : Fragment() {
             drawerController = context
         } else {
             throw RuntimeException("$context must implement DrawerController")
+        }
+        if (context is HomeCardClickController) {
+            onItemClickListener = context
+        } else {
+            throw RuntimeException("$context must implement HomeCardClickController")
         }
     }
 
@@ -62,7 +70,15 @@ class Home_Fragment : Fragment() {
                 drawerController?.openDrawer()
             }
 
+            val cardViewProfessional = findViewById<CardView>(R.id.cvBookProfessional)
+            val cardViewBuildingMaterials = findViewById<CardView>(R.id.cvBuildingMaterial)
 
+            cardViewProfessional.setOnClickListener {
+                onItemClickListener?.onProfessionalCardClick()
+            }
+            cardViewBuildingMaterials.setOnClickListener {
+                onItemClickListener?.onBuildingMaterialsCardClick()
+            }
 
 
 

@@ -15,6 +15,7 @@
         android:background="@drawable/background_for_toolbar">
 
         <ImageView
+            android:id="@+id/ivHelpEaqsBack"
             android:layout_marginTop="5dp"
             android:layout_marginStart="15dp"
             android:src="@drawable/ic_arrow_back"
@@ -25,7 +26,7 @@
         <TextView
             style="@style/txtpoppinsregular20"
             android:layout_marginStart="40dp"
-            android:text="Find Professionals"
+            android:text="Help &amp; EAQ's  "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -69,6 +70,15 @@
 
     </LinearLayout>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -86,6 +96,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="10dp"
+        android:nestedScrollingEnabled="false"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -94,13 +105,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="24dp"
         style="@style/txtpoppinsregular20"
         android:textColor="@color/puple_900"
         android:text="Got any  other queries ?"/>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
     android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
@@ -121,6 +136,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
         android:orientation="horizontal">
     <TextView
         android:layout_width="wrap_content"
@@ -137,6 +154,7 @@
         android:textColor="@color/yellow"
         android:text="qecuries@gmail.com"/>
     </LinearLayout>
-
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

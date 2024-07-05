@@ -3,7 +3,6 @@ package com.example.handybook_construction_android_app.ui.orders_fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RatingBar
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
 

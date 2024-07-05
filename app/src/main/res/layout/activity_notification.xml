@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notificationactivity.NotificationActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/iv_notification_vector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-84dp"
+        android:src="@drawable/iv_bell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tvNotification"
+        style="@style/txtpoppinsemibold16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Notifications"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tvNotificationMsg"
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="First store would like to send you \n Notifications"
+        app:layout_constraintEnd_toEndOf="@+id/tvNotification"
+        app:layout_constraintStart_toStartOf="@+id/tvNotification"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotification" />
+
+    <Button
+        android:id="@+id/btNotificationYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/tvNotificationMsg"
+        app:layout_constraintStart_toStartOf="@+id/tvNotificationMsg"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotificationMsg"
+    />
+
+
+    <Button
+        android:id="@+id/btNotificationNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/outlined_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/btNotificationYes"
+        app:layout_constraintStart_toStartOf="@+id/btNotificationYes"
+        app:layout_constraintTop_toBottomOf="@+id/btNotificationYes"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

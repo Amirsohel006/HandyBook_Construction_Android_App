@@ -188,6 +188,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvHomeTitle">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvBookProfessional"
                 android:layout_width="169dp"
                 android:layout_height="114dp"
                 android:layout_marginEnd="10dp"
@@ -211,6 +212,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvBuildingMaterial"
                 android:layout_width="169dp"
                 android:layout_height="114dp"
                 android:layout_marginStart="10dp"

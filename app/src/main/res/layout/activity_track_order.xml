@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.trackorderactivity.TrackOrderActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivTrackOrderBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+
+        <TextView
+            android:id="@+id/tvToolbarTitleCart"
+            style="@style/txtpoppinsregular20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Track Order" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tvOrderDetails"
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Order Details"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <View
+        android:id="@+id/vProgressFirst"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_background_progress"
+
+        app:layout_constraintStart_toStartOf="@+id/tvOrderDetails"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderDetails" />
+
+    <TextView
+        android:id="@+id/tvOrderStatusStart"
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:alpha=".75"
+        android:text="Order Confirmed"
+        app:layout_constraintBottom_toBottomOf="@+id/vProgressFirst"
+        app:layout_constraintStart_toEndOf="@+id/vProgressFirst"
+        app:layout_constraintTop_toTopOf="@+id/vProgressFirst" />
+
+    <TextView
+        android:id="@+id/tvOrderStatusStartDate"
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".75"
+        android:text="Friday, 6th June ,2023"
+        app:layout_constraintStart_toStartOf="@+id/tvOrderStatusStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderStatusStart" />
+
+    <View
+        android:id="@+id/pgProgressFirst"
+        android:layout_width="8dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="-2dp"
+        android:background="@color/grey_900"
+        app:layout_constraintEnd_toEndOf="@+id/vProgressFirst"
+        app:layout_constraintStart_toStartOf="@+id/vProgressFirst"
+        app:layout_constraintTop_toBottomOf="@+id/vProgressFirst" />
+
+    <View
+
+        android:id="@+id/vProgressSecond"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="-2dp"
+
+        android:background="@drawable/circle_background_progress"
+        app:layout_constraintEnd_toEndOf="@+id/pgProgressFirst"
+        app:layout_constraintStart_toStartOf="@+id/pgProgressFirst"
+        app:layout_constraintTop_toBottomOf="@+id/pgProgressFirst" />
+
+    <TextView
+        android:id="@+id/tvOrderStatusSecond"
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:alpha=".75"
+        android:text="Packed"
+        app:layout_constraintBottom_toBottomOf="@+id/vProgressSecond"
+        app:layout_constraintStart_toEndOf="@+id/vProgressSecond"
+        app:layout_constraintTop_toTopOf="@+id/vProgressSecond" />
+
+    <TextView
+        android:id="@+id/tvOrderStatusPackedDate"
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".75"
+        android:text="Friday, 7th June ,2023"
+        app:layout_constraintStart_toStartOf="@+id/tvOrderStatusSecond"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderStatusSecond" />
+
+    <View
+        android:id="@+id/pgProgressSecond"
+        android:layout_width="8dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="-2dp"
+        android:background="@color/grey_900"
+        app:layout_constraintEnd_toEndOf="@+id/vProgressSecond"
+        app:layout_constraintStart_toStartOf="@+id/vProgressSecond"
+        app:layout_constraintTop_toBottomOf="@id/vProgressSecond" />
+
+    <View
+
+        android:id="@+id/vProgressThird"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/circle_background_progress"
+        app:layout_constraintEnd_toEndOf="@+id/pgProgressSecond"
+        app:layout_constraintStart_toStartOf="@+id/pgProgressSecond"
+        app:layout_constraintTop_toBottomOf="@+id/pgProgressSecond" />
+
+    <TextView
+        android:id="@+id/tvOrderStatusThird"
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:alpha=".75"
+        android:text="Shipped"
+        app:layout_constraintBottom_toBottomOf="@+id/vProgressThird"
+        app:layout_constraintStart_toEndOf="@+id/vProgressThird"
+        app:layout_constraintTop_toTopOf="@+id/vProgressThird" />
+
+    <TextView
+        android:id="@+id/tvOrderShippedDate"
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".75"
+        android:text="Friday, 8th June ,2023"
+        app:layout_constraintStart_toStartOf="@+id/tvOrderStatusThird"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderStatusThird" />
+
+    <View
+        android:id="@+id/pgProgressThird"
+        android:layout_width="8dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="-2dp"
+        android:background="@color/grey_900"
+        app:layout_constraintEnd_toEndOf="@id/vProgressThird"
+        app:layout_constraintStart_toStartOf="@id/vProgressThird"
+        app:layout_constraintTop_toBottomOf="@id/vProgressThird" />
+
+    <View
+
+        android:id="@+id/vProgressFourth"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/circle_background_progress"
+        app:layout_constraintEnd_toEndOf="@+id/pgProgressThird"
+        app:layout_constraintStart_toStartOf="@+id/pgProgressThird"
+        app:layout_constraintTop_toBottomOf="@+id/pgProgressThird" />
+
+    <TextView
+        android:id="@+id/tvOrderStatusLast"
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:alpha=".75"
+        android:text="Delivery"
+        app:layout_constraintBottom_toBottomOf="@+id/vProgressFourth"
+        app:layout_constraintStart_toEndOf="@+id/vProgressFourth"
+        app:layout_constraintTop_toTopOf="@+id/vProgressFourth" />
+
+    <TextView
+        android:id="@+id/tvOrderDeliveryDate"
+
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".75"
+        android:text="Expected by Friday, 8th June ,2023 \nShipment yet to be delivered"
+        app:layout_constraintStart_toStartOf="@+id/tvOrderStatusLast"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderStatusLast" />
+
+    <TextView
+        android:id="@+id/tvDelivery"
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:alpha=".75"
+        android:drawableStart="@drawable/ic_location"
+        android:drawableTint="@color/green"
+        android:text="Delivery Address"
+        app:layout_constraintStart_toStartOf="@+id/vProgressFourth"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderDeliveryDate" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:alpha=".75"
+        android:text="Jp Nagar, 6th cross, Bangalore, Karnataka"
+        app:layout_constraintStart_toStartOf="@+id/tvDelivery"
+        app:layout_constraintTop_toBottomOf="@+id/tvDelivery" />
+
+    <Button
+        android:id="@+id/btGiveFeedBack"
+        style="@style/txtbuttonpoppinsmidum20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Give FeedBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/btBackToBooks"
+        style="@style/txtbuttonpoppinsmidum20outlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Back to Books"
+        android:textColor="@color/blue_100"
+        app:layout_constraintEnd_toEndOf="@+id/btGiveFeedBack"
+        app:layout_constraintStart_toStartOf="@+id/btGiveFeedBack"
+        app:layout_constraintTop_toBottomOf="@+id/btGiveFeedBack" />
+</androidx.constraintlayout.widget.ConstraintLayout>

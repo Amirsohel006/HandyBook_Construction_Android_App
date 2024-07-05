@@ -1,13 +1,14 @@
-package com.example.handybook_construction_android_app.ui.book_an_appointment_activity
+package com.example.handybook_construction_android_app.ui.editprofileactivity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handybook_construction_android_app.R
 
-class BookAnAppointmentActivity : AppCompatActivity() {
+class EditProfileActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_book_an_appointment)
+        setContentView(R.layout.activity_edit_profile)
 
     }
 }

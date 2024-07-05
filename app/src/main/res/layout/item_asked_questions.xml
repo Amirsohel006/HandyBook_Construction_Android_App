@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="12dp"
+    android:animateLayoutChanges="true"
     android:orientation="vertical">
     
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:text="How to place order ?"
-        style="@style/txtpoppinsemibold24"
+        style="@style/txtpoppinsemibold18"
         android:textColor="@color/blue_100"
         android:drawableEnd="@drawable/drop_down_icon"/>
     <TextView
@@ -20,15 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="12dp"
+        android:visibility="gone"
         android:text="Norem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. "
         style="@style/txtpoppinmedium14"
         android:textColor="@color/grey"
        />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerThickness="1dp"
-        app:dividerColor="@color/blue_100"/>
 
 </LinearLayout>

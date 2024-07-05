@@ -1,14 +1,10 @@
 package com.example.handybook_construction_android_app.ui.favoriteacitivity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
-import com.example.handybook_construction_android_app.ui.professional_fragment.ProfessionalAdapter
 
 class FavoriteActivity : AppCompatActivity(), FavoriteAdapter.OnClickListener {
     lateinit var adapter: FavoriteAdapter

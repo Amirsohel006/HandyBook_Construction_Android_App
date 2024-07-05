@@ -7,19 +7,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
-import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.handybook_construction_android_app.EditProfileActivity
+import com.example.handybook_construction_android_app.ui.editprofileactivity.EditProfileActivity
 import com.example.handybook_construction_android_app.controller.DrawerController
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.controller.HomeCardClickController
+import com.example.handybook_construction_android_app.ui.trackorderactivity.TrackOrderActivity
 import com.example.handybook_construction_android_app.ui.aboutusactivity.AboutUsActivity
+import com.example.handybook_construction_android_app.ui.cartactivty.CartActivity
 import com.example.handybook_construction_android_app.ui.eventsfragment.EventFragment
 import com.example.handybook_construction_android_app.ui.favoriteacitivity.FavoriteActivity
+import com.example.handybook_construction_android_app.ui.helpeaqsactivity.HelpEAQsActivity
 import com.example.handybook_construction_android_app.ui.home_fragment.Home_Fragment
 import com.example.handybook_construction_android_app.ui.orders_fragment.OrderActivity
 import com.example.handybook_construction_android_app.ui.privacypolicyactivity.PrivacyPolicyActivity
@@ -29,11 +33,10 @@ import com.example.handybook_construction_android_app.ui.referrals.ReferralsActi
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
-class HomeContainer : AppCompatActivity(), DrawerController {
+class HomeContainer : AppCompatActivity(), DrawerController,HomeCardClickController {
 
     private lateinit var frameBottomBar: BottomNavigationView
     private lateinit var drawerLayout: DrawerLayout
-
     private lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +61,7 @@ class HomeContainer : AppCompatActivity(), DrawerController {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             Log.d("NavController", "Navigated to ${destination.label}")
         }
+
 
 
         NavigationUI.setupWithNavController(navigationView, navController)
@@ -122,6 +126,15 @@ class HomeContainer : AppCompatActivity(), DrawerController {
                 }
                 R.id.nav_privacy_policy -> {
                     startActivity(Intent(this, PrivacyPolicyActivity::class.java))
+                }
+                R.id.nav_help_and_faq -> {
+                    startActivity(Intent(this, HelpEAQsActivity::class.java))
+                }
+                R.id.nav_my_cart -> {
+                    startActivity(Intent(this, CartActivity::class.java))
+                }
+                R.id.nav_change_address ->{
+                    startActivity(Intent(this, TrackOrderActivity::class.java))
                 }
 
             }
@@ -213,6 +226,16 @@ class HomeContainer : AppCompatActivity(), DrawerController {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         }
+    }
+
+    override fun onProfessionalCardClick() {
+        replaceFragment(ProfessionalFragment())
+        frameBottomBar.selectedItemId = R.id.proessionals
+    }
+
+    override fun onBuildingMaterialsCardClick() {
+        replaceFragment(com.example.handybook_construction_android_app.ui.category_fragment.Category_Fragment())
+        frameBottomBar.selectedItemId = R.id.categotries
     }
 
 }
