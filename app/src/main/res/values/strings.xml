@@ -2,4 +2,19 @@
     <string name="app_name">HandyBook_Construction_Android_App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="professionals">Professionals</string>
+    <string name="events">Events</string>
+    <string name="books">Books</string>
+    <string name="my_orders">My Orders</string>
+    <string name="my_cart">My Cart</string>
+    <string name="favorite">Favorite</string>
+    <string name="change_address">Change Address</string>
+    <string name="referrals">Referrals</string>
+    <string name="help_amp_faq"><![CDATA[Help & Faq]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_underlined"><u>About Us</u></string>
+    <string name="request_a_quote">Request a Quote</string>
 </resources>

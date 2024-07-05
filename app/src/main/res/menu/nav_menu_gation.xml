@@ -2,36 +2,36 @@
     <item
         android:id="@+id/nav_my_order"
         android:icon="@drawable/ic_order"
-        android:title="My Orders" />
+        android:title="@string/my_orders" />
     <item
         android:id="@+id/nav_my_cart"
         android:icon="@drawable/ic_cart"
-        android:title="My Cart" />
+        android:title="@string/my_cart" />
     <item
         android:id="@+id/nav_favorites"
-        android:icon="@drawable/ic_favriotes"
-        android:title="Favorite" />
+        android:icon="@drawable/ic_favorites"
+        android:title="@string/favorite" />
     <item
         android:id="@+id/nav_change_address"
-        android:icon="@drawable/ic_address"
-        android:title="Change Address" />
+        android:icon="@drawable/ic_location"
+        android:title="@string/change_address" />
     <item
         android:id="@+id/nav_referells"
         android:icon="@drawable/ic_referrals"
-        android:title="Referrals" />
+        android:title="@string/referrals" />
     <item
         android:id="@+id/nav_help_and_faq"
         android:icon="@drawable/ic_help"
-        android:title="Help &amp; Faq" />
+        android:title="@string/help_amp_faq" />
 
     <item
         android:id="@+id/nav_privacy_policy"
         android:icon="@drawable/ic_policy"
-        android:title="Privacy Policy" />
+        android:title="@string/privacy_policy" />
 
 
     <item
         android:id="@+id/nav_about_us"
         android:icon="@drawable/ic_about"
-        android:title="About Us" />
+        android:title="@string/about_us" />
 </menu>

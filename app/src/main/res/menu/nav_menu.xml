@@ -4,27 +4,27 @@
     <item
          android:id="@+id/home"
          android:icon="@drawable/img_home"
-         android:title="Home" />
+         android:title="@string/home" />
 
 
     <item
         android:id="@+id/categotries"
         android:icon="@drawable/category_icon"
-        android:title="Categories"/>
+        android:title="@string/categories"/>
 
 
     <item
         android:id="@+id/proessionals"
-        android:icon="@drawable/profession_icon"
-        android:title="Professionals" />
+        android:icon="@drawable/book_professional_icon"
+        android:title="@string/professionals" />
 
     <item
         android:id="@+id/events"
         android:icon="@drawable/icon_events"
-        android:title="Events" />
+        android:title="@string/events" />
 
     <item
         android:id="@+id/books"
         android:icon="@drawable/books_icon"
-        android:title="Books" />
+        android:title="@string/books" />
 </menu>

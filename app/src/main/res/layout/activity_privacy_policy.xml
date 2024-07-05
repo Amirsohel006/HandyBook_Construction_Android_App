@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.privacypolicyactivity.PrivacyPolicyActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_toolbar">
+
+        <ImageView
+            android:id="@+id/ivPrivacyPolicyBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+
+        <TextView
+            style="@style/txtpoppinsregular20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:text="Privacy Policy" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iv_security" />
+
+        <TextView
+
+            style="@style/txtintermedium18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Welcome Handy Book Privacy \nPolicy"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        style="@style/txtpoppinregular16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:padding="4dp"
+        android:text="Introducation:" />
+
+    <TextView
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="16dp"
+        android:padding="4dp"
+        android:alpha=".85"
+        android:text="At Handy Book, we value your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website." />
+    <TextView
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="16dp"
+        android:padding="4dp"
+        android:alpha=".85"
+        android:text="Purpose: This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website." />
+    <TextView
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="16dp"
+        android:padding="4dp"
+        android:alpha=".85"
+        android:text="Importance of privacy: We value your privacy and are committed to safeguarding your personal information." />
+    <TextView
+        style="@style/txtintermedium14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="16dp"
+        android:padding="4dp"
+        android:alpha=".85"
+        android:text="Types of Information Collected:" />
+
+    <TextView
+        style="@style/txtinterregular12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="16dp"
+        android:padding="4dp"
+        android:alpha=".85"
+        android:text="We may collect personal information, such as your name, email address, and shipping address when you create an account or place an order on our website. Additionally, we may automatically collect certain information through cookies and other tracking technologies to enhance your browsing experience." />
+
+
+</LinearLayout>

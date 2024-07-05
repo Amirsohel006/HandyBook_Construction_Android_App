@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_cancel"
+        android:layout_gravity="center_horizontal|end"
+        android:layout_margin="12dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iv_done"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"/>
+    <TextView
+        android:id="@+id/tv_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/txtintermedium18"
+        android:text="Order Confirmed"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_order_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/txtintermedium14"
+        android:text="Your order has been confirmed will be \n delivered soon"
+        android:gravity="center"
+        android:textColor="@color/grey_900"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/txtintermedium14"
+        android:text="Order Id: 10000070 "
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:layout_gravity="center_horizontal"/>
+    
+    <Button
+        android:id="@+id/btTrackYourOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track Your Order"
+        style="@style/txtbuttonpoppinsmidum20"
+        android:layout_margin="12dp"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

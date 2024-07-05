@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:orientation="horizontal">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivOrderImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="12dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/iv_book"
+                app:shapeAppearance="@style/RoundedImageView"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvBookTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txtpoppinsemibold16"
+                    android:padding="2dp"
+                    android:text="Civil Book"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/tvBookQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txtpoppinmedium12"
+                    android:text="Qty : 100"
+                    android:padding="2dp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/tvBookPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txtpoppinsregular16"
+                    android:text="₹ 2900"
+                    android:padding="2dp"
+                    android:textColor="@color/black"
+                    />
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.Holo.RatingBar.Small"
+                    android:backgroundTint="@color/white"
+                    android:isIndicator="false"
+                    android:progressTint="@color/yellow"
+                    android:numStars="5"
+                    android:stepSize="1.0"
+                    android:rating="3.5" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/viewBookOrderStatus"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/circle_background"
+                        android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvBookOrderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txtpoppinsregular121"
+                    android:text="Order Dispatched"
+                    android:padding="2dp"
+                    android:textColor="@color/orange"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,18 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".filter_category_fragment.Filter_Category_Activity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_toolbar">
+
+        <ImageView
+            android:id="@+id/ivFilterCategoryBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_cancel" />
+
+
+        <TextView
+            style="@style/txtpoppinsregular20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Professional Category" />
+
+
+        <TextView
+            style="@style/txtpoppinsregular16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:text="Done" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_category" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <TextView
+            style="@style/txtpoppinsemibold16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Design &amp; Renovation" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Architects &amp; Building Designers" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Civil Engineers &amp; Contractors" />
+
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Design-Build Firms" />
+
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Kitchen &amp; Bath Designers" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Landscope Architecture &amp; Contractors" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Interior Designers &amp; Decorators" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Tiles, Stones &amp; Countertops" />
+
+        <TextView
+            style="@style/txtpoppinsemibold16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Home Improvements" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Furniture  &amp; Accessories" />
+
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Flooring &amp; Carpet" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Bedding &amp; Bath" />
+
+        <TextView
+            style="@style/txtpoppinregular12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Speciality Contractors" />
+
+
+    </LinearLayout>
 </LinearLayout>

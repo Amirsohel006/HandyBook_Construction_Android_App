@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.book_an_appointment_activity.BookAnAppointmentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_toolbar">
+
+        <ImageView
+            android:id="@+id/ivReferralBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+
+        <TextView
+            style="@style/txtpoppinsregular20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:text="@string/request_a_quote" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        style="@style/txtpoppinsregular16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:padding="4dp"
+        android:text="Book an Appointment" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Your Name"
+        android:layout_margin="12dp"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Your Email"
+        android:layout_margin="12dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Your Phone Number"
+        android:layout_margin="12dp"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Date"
+        android:drawableStart="@drawable/icon_date_picker"
+        android:drawableTint="@color/grey_900"
+        android:drawablePadding="12dp"
+        android:layout_margin="12dp"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/etPurpose"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/outlined_edittext"
+        android:hint="What you are looking for ?"
+        android:layout_margin="12dp"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/btBookAnAppointSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        style="@style/txtbuttonpoppinsmidum20"
+        android:text="Submit"/>
+</LinearLayout>

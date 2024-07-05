@@ -41,7 +41,7 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="156dp">
+        android:paddingBottom="120dp">
 
         <ImageView
             android:id="@+id/indicator1"

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinsregular20"
+        android:text="Edit Profile"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@color/blue_100"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/iv_Profile_image"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/grey"
+        android:padding="24dp"
+        android:background="@drawable/rounded_corner_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Profile"
+        android:padding="4dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/grey"/>
+
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/txtpoppinsemibold24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Profile"
+        android:padding="4dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="youremail@domain.com"
+            android:padding="4dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/txtpoppinsemibold24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="|"
+            android:padding="4dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:id="@+id/tv_contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="+91 4756389392"
+            android:padding="4dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_person"
+        android:drawableTint="@color/grey"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+        android:text="Name"
+        android:padding="4dp"
+        android:layout_marginTop="52dp"
+        android:textColor="@color/grey"/>
+    <EditText
+        android:id="@+id/etProfileUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Your Username"
+        android:layout_margin="12dp"
+        android:inputType="text"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawableTint="@color/grey"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+        android:text="Phone Number"
+        android:padding="4dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/grey"/>
+    <EditText
+        android:id="@+id/etProfileContactNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Your Phone Number"
+        android:layout_margin="12dp"
+        android:inputType="phone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_email"
+        android:drawableTint="@color/grey"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+        android:text="Email Address"
+        android:padding="4dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/grey"/>
+    <EditText
+        android:id="@+id/etProfileEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outlined_edittext"
+        android:hint="Your Email"
+        android:layout_margin="12dp"
+        android:inputType="textEmailAddress"/>
+
+
+
+
+
+
+</LinearLayout>

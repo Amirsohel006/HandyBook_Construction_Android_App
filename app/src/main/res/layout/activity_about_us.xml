@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.aboutusactivity.AboutUsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_toolbar">
+
+        <ImageView
+            android:id="@+id/ivAboutUsBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+
+        <TextView
+            style="@style/txtpoppinsregular20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:text="About Us" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_aboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iv_about_us" />
+
+        <TextView
+            style="@style/txtintermedium18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Why Choose Us?"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        style="@style/txtintermedium18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:padding="4dp"
+        android:text="@string/about_us_underlined" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/txtintermedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="12dp"
+            android:padding="8dp"
+            android:text="\u2022"
+            android:textColor="@color/grey_100"
+            android:ellipsize="start"/>
+        <TextView
+            style="@style/txtintermedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="12dp"
+            android:padding="8dp"
+            android:text="At Handy Book we understand the importance of convenience and quality when it comes to shopping, as well as finding the perfect furniture and electronics for your home. Our mission is to provide you with a seamless online shopping experience, offering a wide selection of high-quality products at competitive prices."
+            android:textColor="@color/grey_100"
+            android:ellipsize="start"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/txtintermedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="12dp"
+            android:padding="8dp"
+            android:text="\u2022"
+            android:textColor="@color/grey_100"
+            android:ellipsize="start"/>
+        <TextView
+            style="@style/txtintermedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="12dp"
+            android:padding="8dp"
+            android:text="With Handy Book, you can browse through a diverse range of fresh produce, pantry essentials, stylish furniture, and cutting-edge electronics. We source our products from trusted suppliers to ensure that you receive only the best. Whether you're stocking up on or looking for the latest tech gadgets, we've got you covered."
+            android:textColor="@color/grey_100"
+            android:ellipsize="start"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/txtintermedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="12dp"
+            android:padding="8dp"
+            android:text="\u2022"
+            android:textColor="@color/grey_100"
+            android:ellipsize="start"/>
+        <TextView
+            style="@style/txtintermedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="12dp"
+            android:padding="8dp"
+            android:text="With a focus on quality, affordability, and convenience, we strive to make your shopping experience easy and enjoyable. Our team is committed to providing excellent customer service and ensuring your satisfaction with every purchase."
+            android:textColor="@color/grey_100"
+            android:ellipsize="start"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

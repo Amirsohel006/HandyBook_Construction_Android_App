@@ -2,28 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="5dp"
+    android:layout_margin="8dp"
+    android:padding="4dp"
     android:layout_height="wrap_content">
-
-
-
 
     <ImageView
         android:src="@drawable/event_image"
         android:id="@+id/imageview"
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="196dp"/>
-
-
+        android:layout_height="wrap_content"/>
     <TextView
         style="@style/txtpoppinsregular16"
         android:text="Construction Technology Expo 2023 "
         android:layout_width="match_parent"
+        android:padding="4dp"
         android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:padding="4dp"
         android:layout_height="wrap_content">
 
         <ImageView
@@ -37,6 +36,7 @@
             android:text="20/06/2024"
             style="@style/txtpoppinregular12"
             android:layout_gravity="center"
+            android:paddingStart="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -45,19 +45,21 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:padding="4dp"
         android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:id="@+id/location"
-            android:src="@drawable/location_icon"
+            android:src="@drawable/ic_location"
             />
 
         <TextView
             style="@style/txtpoppinregular12"
             android:text="ABC Conference Hall"
             android:layout_gravity="center"
+            android:paddingStart="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -67,12 +69,14 @@
         style="@style/txtpoppinregular12"
         android:text="Explore the latest advancement in construction\ntechnology  at our anual expo"
         android:layout_width="match_parent"
+        android:padding="4dp"
         android:layout_height="wrap_content"/>
 
     <TextView
         style="@style/txtpoppinsregular121"
         android:gravity="center"
         android:text="View More"
+        android:padding="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableEnd="@drawable/icon_explore"/>
