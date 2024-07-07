@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:text="Find Professionals" />
+            android:text="Confirm Address" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -39,10 +39,11 @@
         android:id="@+id/step1_circle"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/circle_step_active"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/step1_number"
@@ -63,40 +64,41 @@
         android:layout_height="wrap_content"
         android:text="Address"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/step1_circle"
-        app:layout_constraintStart_toStartOf="@+id/step1_circle"
         app:layout_constraintEnd_toEndOf="@+id/step1_circle"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/step1_circle"
+        app:layout_constraintTop_toBottomOf="@+id/step1_circle" />
 
     <!-- Line between Step 1 and Step 2 -->
     <View
         android:id="@+id/line1"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/colorAccent"
+        android:background="@color/green_900"
         app:layout_constraintStart_toEndOf="@+id/step1_circle"
         app:layout_constraintEnd_toStartOf="@+id/step2_circle"
         app:layout_constraintTop_toTopOf="@+id/step1_circle"
         app:layout_constraintBottom_toBottomOf="@+id/step1_circle"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+         />
 
     <!-- Step 2 -->
+
     <View
         android:id="@+id/step2_circle"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circle_step_inactive"
-        app:layout_constraintStart_toEndOf="@+id/line1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/step1_circle"
+        app:layout_constraintEnd_toStartOf="@+id/step3_number"
+        app:layout_constraintStart_toEndOf="@+id/step1_circle"
+        app:layout_constraintTop_toTopOf="@+id/step1_circle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/step2_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
-        android:textColor="@color/colorAccent"
+
         android:textSize="18sp"
         android:layout_gravity="center"
         app:layout_constraintTop_toTopOf="@+id/step2_circle"
@@ -110,40 +112,39 @@
         android:layout_height="wrap_content"
         android:text="Order Summary"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/step2_circle"
-        app:layout_constraintStart_toStartOf="@+id/step2_circle"
         app:layout_constraintEnd_toEndOf="@+id/step2_circle"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/step2_circle"
+        app:layout_constraintTop_toBottomOf="@+id/step2_circle" />
 
     <!-- Line between Step 2 and Step 3 -->
     <View
         android:id="@+id/line2"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/colorAccent"
+        android:background="@color/green_900"
         app:layout_constraintStart_toEndOf="@+id/step2_circle"
         app:layout_constraintEnd_toStartOf="@+id/step3_circle"
         app:layout_constraintTop_toTopOf="@+id/step2_circle"
         app:layout_constraintBottom_toBottomOf="@+id/step2_circle"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+       />
 
     <!-- Step 3 -->
+
     <View
         android:id="@+id/step3_circle"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/circle_step_inactive"
-        app:layout_constraintStart_toEndOf="@+id/line2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/step2_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/step2_circle" />
 
     <TextView
         android:id="@+id/step3_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
-        android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:layout_gravity="center"
         app:layout_constraintTop_toTopOf="@+id/step3_circle"
@@ -157,12 +158,20 @@
         android:layout_height="wrap_content"
         android:text="Payment"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/step3_circle"
-        app:layout_constraintStart_toStartOf="@+id/step3_circle"
         app:layout_constraintEnd_toEndOf="@+id/step3_circle"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/step3_circle"
+        app:layout_constraintTop_toBottomOf="@+id/step3_circle" />
 
-
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step2_label" />
 
 
 

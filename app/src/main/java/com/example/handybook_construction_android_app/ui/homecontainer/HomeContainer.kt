@@ -20,6 +20,8 @@ import com.example.handybook_construction_android_app.R
 import com.example.handybook_construction_android_app.controller.HomeCardClickController
 import com.example.handybook_construction_android_app.ui.trackorderactivity.TrackOrderActivity
 import com.example.handybook_construction_android_app.ui.aboutusactivity.AboutUsActivity
+import com.example.handybook_construction_android_app.ui.addressactivity.ChangeAddressActivity
+import com.example.handybook_construction_android_app.ui.bookstoreactivity.BookStoreFragment
 import com.example.handybook_construction_android_app.ui.cartactivty.CartActivity
 import com.example.handybook_construction_android_app.ui.eventsfragment.EventFragment
 import com.example.handybook_construction_android_app.ui.favoriteacitivity.FavoriteActivity
@@ -98,7 +100,7 @@ class HomeContainer : AppCompatActivity(), DrawerController,HomeCardClickControl
                 }
 
                 R.id.books -> {
-                    replaceFragment(ProffessionalsDetailsFragment())
+                    replaceFragment(BookStoreFragment())
                     true
                 }
 
@@ -134,7 +136,7 @@ class HomeContainer : AppCompatActivity(), DrawerController,HomeCardClickControl
                     startActivity(Intent(this, CartActivity::class.java))
                 }
                 R.id.nav_change_address ->{
-                    startActivity(Intent(this, TrackOrderActivity::class.java))
+                    startActivity(Intent(this, ChangeAddressActivity::class.java))
                 }
 
             }

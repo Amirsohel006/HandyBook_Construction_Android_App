@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity=""
+    android:padding="12dp">
+
+    <RadioButton
+        android:id="@+id/rbSavedAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="12dp"
+        android:layout_weight="1"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/tvDestinationRelation"
+            style="@style/txtpoppinsemibold16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+
+            android:text="Home" />
+
+
+        <TextView
+            android:id="@+id/tvNameSavedAddress"
+            style="@style/txtpoppinmedium14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="4dp"
+            android:text="Dinesh"
+
+            android:textColor="@color/grey_100" />
+
+
+        <TextView
+            android:id="@+id/tvSavedAddress"
+            style="@style/txtpoppinmedium14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="4dp"
+            android:text="New cozy PG , 5th phase ,JP Nagar, Bengaluru , 560078."
+            android:textColor="@color/grey_100" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivEditSavedAddress"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_edit"
+
+        />
+
+</LinearLayout>
