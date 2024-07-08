@@ -1,6 +1,7 @@
 package com.example.handybook_construction_android_app.ui.cartactivty
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +17,11 @@ class CartActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.rvCartOrder)
         recyclerView.layoutManager=LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
+        val back=findViewById<ImageView>(R.id.ivCartBack)
+        back.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onResume() {

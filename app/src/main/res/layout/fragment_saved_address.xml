@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.addressactivity.SavedAddressFragment">
+        tools:context=".ui.address.change_address.SavedAddressFragment">
 
 
         <TextView
@@ -28,6 +28,7 @@
             android:nestedScrollingEnabled="false" />
 
         <LinearLayout
+            android:id="@+id/btAddNewAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
@@ -37,7 +38,6 @@
             android:padding="8dp">
 
             <ImageView
-                android:id="@+id/icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btProceedCart"
+            android:id="@+id/btSavedAddress"
             style="@style/txtbuttonpoppinsmidum20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,6 +1,5 @@
-package com.example.handybook_construction_android_app.ui.addressactivity
+package com.example.handybook_construction_android_app.ui.address.change_address
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +8,9 @@ import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
-import com.example.handybook_construction_android_app.ui.cartactivty.CartAdapter.CardViewHolder
 
-class SavedAddressAdapter : RecyclerView.Adapter<SavedAddressAdapter.CardViewHolder>() {
+class SavedAddressAdapter(val listener: OnEditController) :
+    RecyclerView.Adapter<SavedAddressAdapter.CardViewHolder>() {
     class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val radioButton = itemView.findViewById<RadioButton>(R.id.rbSavedAddress)
@@ -25,10 +24,10 @@ class SavedAddressAdapter : RecyclerView.Adapter<SavedAddressAdapter.CardViewHol
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SavedAddressAdapter.CardViewHolder {
+    ): CardViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_saved_address, parent, false)
-        return SavedAddressAdapter.CardViewHolder(
+        return CardViewHolder(
             view
         )
     }
@@ -41,8 +40,11 @@ class SavedAddressAdapter : RecyclerView.Adapter<SavedAddressAdapter.CardViewHol
             holder.radioButton.isChecked = !holder.radioButton.isChecked
         }
         holder.editIV.setOnClickListener {
-            Log.d("Clicked","Edit")
-            // Navigate to edit address activity
+            listener.onEditClick()
         }
+    }
+
+    interface OnEditController {
+        fun onEditClick()
     }
 }

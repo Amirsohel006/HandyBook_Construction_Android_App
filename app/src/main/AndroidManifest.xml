@@ -13,7 +13,22 @@
         android:theme="@style/Theme.HandyBook_Construction_Android_App"
         tools:targetApi="31">
         <activity
-            android:name=".ui.addressactivity.ChangeAddressActivity"
+            android:name=".ui.book_details.BookDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.professional_details_fragment.ProfessionalDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.showroom.ShowroomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.address.add_address.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.feedback.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.address.change_address.ChangeAddressActivity"
             android:exported="false" />
         <activity
             android:name=".ui.trackorderactivity.TrackOrderActivity"
@@ -62,7 +77,13 @@
             android:exported="false" />
         <activity
             android:name=".ui.homecontainer.HomeContainer"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.signupactivity.SignUpActivity"
             android:exported="false" />
@@ -74,13 +95,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.splashscreen.SplashScreen"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

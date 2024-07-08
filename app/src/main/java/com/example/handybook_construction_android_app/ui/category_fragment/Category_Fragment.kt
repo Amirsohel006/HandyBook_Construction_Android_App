@@ -1,14 +1,17 @@
 package com.example.handybook_construction_android_app.ui.category_fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.ui.showroom.ShowroomActivity
 
 
 class Category_Fragment : Fragment() {
@@ -66,6 +69,15 @@ class Category_Fragment : Fragment() {
             // Attach LinearSnapHelper
             val snapHelper3 = LinearSnapHelper()
             snapHelper3.attachToRecyclerView(recyclerView3)
+
+            val viewAll:TextView = findViewById(R.id.tvFurnitureViewAll)
+            viewAll.setOnClickListener {
+                val i= Intent(requireActivity(), ShowroomActivity::class.java)
+                i.putExtra("Category","Furniture")
+                startActivity(i)
+            }
+
+
 
 
         }

@@ -22,7 +22,7 @@ class FiltersActivity : AppCompatActivity() {
             finish()
         }
 
-        val viewPagerAdapter = ViewPagerAdapterForFilter(this)
+        val viewPagerAdapter = FiltersViewPagerAdapter(this)
         viewPager.adapter = viewPagerAdapter
 
         val tabTitles = listOf("Brand","Rating","Categories")

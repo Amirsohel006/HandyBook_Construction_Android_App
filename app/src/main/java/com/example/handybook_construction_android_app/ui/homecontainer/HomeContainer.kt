@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
-import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -18,9 +17,8 @@ import com.example.handybook_construction_android_app.ui.editprofileactivity.Edi
 import com.example.handybook_construction_android_app.controller.DrawerController
 import com.example.handybook_construction_android_app.R
 import com.example.handybook_construction_android_app.controller.HomeCardClickController
-import com.example.handybook_construction_android_app.ui.trackorderactivity.TrackOrderActivity
 import com.example.handybook_construction_android_app.ui.aboutusactivity.AboutUsActivity
-import com.example.handybook_construction_android_app.ui.addressactivity.ChangeAddressActivity
+import com.example.handybook_construction_android_app.ui.address.change_address.ChangeAddressActivity
 import com.example.handybook_construction_android_app.ui.bookstoreactivity.BookStoreFragment
 import com.example.handybook_construction_android_app.ui.cartactivty.CartActivity
 import com.example.handybook_construction_android_app.ui.eventsfragment.EventFragment
@@ -30,7 +28,6 @@ import com.example.handybook_construction_android_app.ui.home_fragment.Home_Frag
 import com.example.handybook_construction_android_app.ui.orders_fragment.OrderActivity
 import com.example.handybook_construction_android_app.ui.privacypolicyactivity.PrivacyPolicyActivity
 import com.example.handybook_construction_android_app.ui.professional_fragment.ProfessionalFragment
-import com.example.handybook_construction_android_app.ui.proffesionaldetailsfragment.ProffessionalsDetailsFragment
 import com.example.handybook_construction_android_app.ui.referrals.ReferralsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -198,7 +195,7 @@ class HomeContainer : AppCompatActivity(), DrawerController,HomeCardClickControl
 
                         is ProfessionalFragment -> frameBottomBar.selectedItemId = R.id.proessionals
                         is EventFragment -> frameBottomBar.selectedItemId = R.id.events
-                        is ProffessionalsDetailsFragment -> frameBottomBar.selectedItemId =
+                        is BookStoreFragment -> frameBottomBar.selectedItemId =
                             R.id.books
                     }
                 } ?: super.onBackPressed()
@@ -209,7 +206,7 @@ class HomeContainer : AppCompatActivity(), DrawerController,HomeCardClickControl
     }
 
 
-    private fun showExitDialog() {
+    fun showExitDialog() {
         AlertDialog.Builder(this)
             .setMessage("Are you sure you want to exit?")
             .setCancelable(false)

@@ -282,7 +282,7 @@
         android:background="@color/grey_100" />
 
     <Button
-        android:id="@+id/btProceedCart"
+        android:id="@+id/btPay"
         style="@style/txtbuttonpoppinsmidum20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

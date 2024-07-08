@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.feedback.FeedbackActivity">
+    <!-- Toolbar with back arrow and title -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_for_toolbar">
+
+        <ImageView
+            android:id="@+id/ivFeedbackBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+
+        <TextView
+            android:id="@+id/tvFeedbackToolbarTitle"
+            style="@style/txtpoppinsregular20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Sofa set" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RatingBar
+        android:id="@+id/ratingBarFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="12dp"
+        android:numStars="5"
+
+        android:progressTint="@color/yellow"
+        android:secondaryProgressTint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/rating_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Tell us a bit more about why you chose 4"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etFeedBack"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="12dp"
+        android:layout_margin="12dp"
+        android:inputType="textMultiLine"
+        android:gravity="start"
+        android:background="@drawable/outlined_edittext"
+        android:text="Love the product! It has exceeded my expectations in terms of quality and functionality."/>
+
+    <Button
+        android:id="@+id/btFeedbackSubmit"
+        style="@style/txtbuttonpoppinsmidum20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="@drawable/button_rectangle"
+        android:text="Submit" />
+</LinearLayout>

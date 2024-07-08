@@ -62,36 +62,49 @@
             android:id="@+id/forotpedittext"
             android:layout_below="@+id/txtOtp"
             android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="18dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/etNumber"
             android:layout_width="65dp"
+            android:maxLength="1"
+            android:gravity="center"
+            android:inputType="number"
             android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
             style="@style/groupStylecornerRadius_3"/>
 
             <EditText
                 android:id="@+id/etNumber1"
                 android:layout_marginStart="15dp"
                 android:layout_width="65dp"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
+
                 style="@style/groupStylecornerRadius_3"/>
             <EditText
                 android:id="@+id/etNumber2"
                 android:layout_width="65dp"
                 android:layout_marginStart="15dp"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
+
                 style="@style/groupStylecornerRadius_3"/>
             <EditText
                 android:id="@+id/etNumber3"
                 android:layout_width="65dp"
+                android:maxLength="1"
+                android:gravity="center"
+                android:inputType="number"
                 android:layout_marginStart="15dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
+
                 style="@style/groupStylecornerRadius_3"/>
         </LinearLayout>
 

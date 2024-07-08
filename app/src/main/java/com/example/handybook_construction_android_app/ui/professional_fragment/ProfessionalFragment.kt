@@ -14,7 +14,7 @@ import com.example.handybook_construction_android_app.R
 import com.example.handybook_construction_android_app.ui.filter_category_fragment.Filter_Category_Activity
 import com.example.handybook_construction_android_app.ui.filter_fragment.FilterActivity
 import com.example.handybook_construction_android_app.ui.location_fragment.CompleteLocationActivity
-import com.example.handybook_construction_android_app.ui.proffesionaldetailsfragment.ProffessionalsDetailsFragment
+import com.example.handybook_construction_android_app.ui.professional_details_fragment.ProfessionalDetailsActivity
 
 
 class ProfessionalFragment : Fragment(),ProfessionalAdapter.OnClickListener {
@@ -57,7 +57,7 @@ class ProfessionalFragment : Fragment(),ProfessionalAdapter.OnClickListener {
     }
 
     override fun onItemClick(position: Int) {
-        startActivity(Intent(requireActivity(),ProffessionalsDetailsFragment::class.java))
+        startActivity(Intent(requireActivity(),ProfessionalDetailsActivity::class.java))
     }
 
 

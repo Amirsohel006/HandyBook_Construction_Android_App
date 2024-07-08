@@ -1,6 +1,5 @@
 package com.example.handybook_construction_android_app.ui.bookstoreactivity
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
-import com.example.handybook_construction_android_app.ui.cartactivty.CartAdapter.CardViewHolder
 
-class BookAdapter:RecyclerView.Adapter<BookAdapter.ViewHolder>() {
+class BookAdapter(val listener :OnItemViewClickListener):RecyclerView.Adapter<BookAdapter.ViewHolder>() {
     class ViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
         val bookImage:ImageView = itemview.findViewById(R.id.ivBookImage)
         val bookName:TextView = itemview.findViewById(R.id.tvBookName)
@@ -32,6 +30,11 @@ class BookAdapter:RecyclerView.Adapter<BookAdapter.ViewHolder>() {
     override fun getItemCount(): Int = 8
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(position)
+        }
+    }
+    interface OnItemViewClickListener{
+        fun onItemClick(position: Int)
     }
 }

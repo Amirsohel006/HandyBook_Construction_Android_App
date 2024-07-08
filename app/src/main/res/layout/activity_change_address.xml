@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.addressactivity.ChangeAddressActivity">
+    tools:context=".ui.address.change_address.ChangeAddressActivity">
 
     <!-- Toolbar with back arrow and title -->
     <androidx.appcompat.widget.Toolbar
@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/ivChangeAddressBack"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_marginStart="15dp"
@@ -50,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
+        style="@style/txtpoppinsemibold12"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_gravity="center"
@@ -58,12 +60,27 @@
         app:layout_constraintStart_toStartOf="@+id/step1_circle"
         app:layout_constraintEnd_toEndOf="@+id/step1_circle" />
 
+    <ImageView
+        android:id="@+id/step1_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check"
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="@+id/step1_circle"
+        app:layout_constraintEnd_toEndOf="@+id/step1_circle"
+        app:layout_constraintStart_toStartOf="@+id/step1_circle"
+        app:layout_constraintTop_toTopOf="@+id/step1_circle" />
+
     <TextView
         android:id="@+id/step1_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
         android:textSize="14sp"
+        style="@style/txtpoppinsemibold12"
+        android:textColor="@color/green_900"
         app:layout_constraintEnd_toEndOf="@+id/step1_circle"
         app:layout_constraintStart_toStartOf="@+id/step1_circle"
         app:layout_constraintTop_toBottomOf="@+id/step1_circle" />
@@ -98,9 +115,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
-
+        style="@style/txtpoppinsemibold12"
+        android:textColor="@color/green_900"
         android:textSize="18sp"
         android:layout_gravity="center"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="@+id/step2_circle"
         app:layout_constraintBottom_toBottomOf="@+id/step2_circle"
         app:layout_constraintStart_toStartOf="@+id/step2_circle"
@@ -112,9 +131,23 @@
         android:layout_height="wrap_content"
         android:text="Order Summary"
         android:textSize="14sp"
+        style="@style/txtpoppinsemibold12"
+        android:textColor="@color/green_900"
         app:layout_constraintEnd_toEndOf="@+id/step2_circle"
         app:layout_constraintStart_toStartOf="@+id/step2_circle"
         app:layout_constraintTop_toBottomOf="@+id/step2_circle" />
+
+    <ImageView
+        android:id="@+id/step2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/step2_circle"
+        app:layout_constraintEnd_toEndOf="@+id/step2_circle"
+        app:layout_constraintStart_toStartOf="@+id/step2_circle"
+        app:layout_constraintTop_toTopOf="@+id/step2_circle" />
 
     <!-- Line between Step 2 and Step 3 -->
     <View
@@ -145,6 +178,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
+        style="@style/txtpoppinsemibold12"
+        android:textColor="@color/green_900"
         android:textSize="18sp"
         android:layout_gravity="center"
         app:layout_constraintTop_toTopOf="@+id/step3_circle"
@@ -157,12 +192,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Payment"
+
         android:textSize="14sp"
+        style="@style/txtpoppinsemibold12"
+        android:textColor="@color/green_900"
         app:layout_constraintEnd_toEndOf="@+id/step3_circle"
         app:layout_constraintStart_toStartOf="@+id/step3_circle"
         app:layout_constraintTop_toBottomOf="@+id/step3_circle" />
 
+    <ImageView
+        android:id="@+id/step3_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/step3_circle"
+        app:layout_constraintEnd_toEndOf="@+id/step3_circle"
+        app:layout_constraintStart_toStartOf="@+id/step3_circle"
+        app:layout_constraintTop_toTopOf="@+id/step3_circle" />
+
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcViewChangeAddress"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"

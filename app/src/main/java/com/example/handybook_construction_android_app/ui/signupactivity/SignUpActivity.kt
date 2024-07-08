@@ -15,8 +15,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         loginTxt=findViewById(R.id.signuptxt)
         loginTxt.setOnClickListener {
-            val i=Intent(this, LoginScreenActivity::class.java)
-            startActivity(i)
+           finish()
         }
     }
 }

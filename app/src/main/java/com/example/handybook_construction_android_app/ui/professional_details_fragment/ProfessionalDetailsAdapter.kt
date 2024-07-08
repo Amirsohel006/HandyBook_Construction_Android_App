@@ -1,4 +1,4 @@
-package com.example.handybook_construction_android_app.ui.proffesionaldetailsfragment
+package com.example.handybook_construction_android_app.ui.professional_details_fragment
 
 import android.view.LayoutInflater
 import android.view.View
