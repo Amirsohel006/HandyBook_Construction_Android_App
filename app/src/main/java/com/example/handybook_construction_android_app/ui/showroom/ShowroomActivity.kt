@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
 import com.example.handybook_construction_android_app.ui.filterActivity.FiltersActivity
 import com.example.handybook_construction_android_app.ui.filter_fragment.FilterActivity
+import com.example.handybook_construction_android_app.ui.showroom.ShowRoomAdapter.OnItemShowRoomListener
+import com.example.handybook_construction_android_app.ui.showroom_details.ShowroomDetailsActivity
 import org.w3c.dom.Text
 
-class ShowroomActivity : AppCompatActivity() {
+class ShowroomActivity : AppCompatActivity(), OnItemShowRoomListener {
     lateinit var adapter: ShowRoomAdapter
     lateinit var recyclerView: RecyclerView
     lateinit var filter:TextView
@@ -20,7 +22,7 @@ class ShowroomActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_showroom)
         recyclerView = findViewById(R.id.rvShowroom)
-        adapter = ShowRoomAdapter()
+        adapter = ShowRoomAdapter(this)
         recyclerView.layoutManager = GridLayoutManager(this , 2 ,GridLayoutManager.VERTICAL,false)
         recyclerView.adapter = adapter
         filter=findViewById(R.id.tvFurniture)
@@ -31,6 +33,10 @@ class ShowroomActivity : AppCompatActivity() {
         filter.setOnClickListener {
          startActivity(Intent(this, FiltersActivity::class.java))
         }
+    }
+
+    override fun onItemClick(position: Int) {
+        startActivity(Intent(this, ShowroomDetailsActivity::class.java))
     }
 
 }

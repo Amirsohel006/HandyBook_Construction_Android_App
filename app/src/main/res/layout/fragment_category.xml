@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.filterActivity.CategoryFragment">
+    android:orientation="vertical"
+    tools:context=".ui.filterActivity.RatingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        style="@style/txtpoppinsemibold16"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Categories" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvFurnitureFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinregular12"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Furniture" />
+
+    <TextView
+        android:id="@+id/tvElectronicsFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinregular12"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Electronics" />
+
+    <TextView
+        android:id="@+id/tvTileFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinregular12"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Tiles" />
+
+    <TextView
+        android:id="@+id/tvPlumbingFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/txtpoppinregular12"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:text="Plumbing Supplies" />
+</LinearLayout>

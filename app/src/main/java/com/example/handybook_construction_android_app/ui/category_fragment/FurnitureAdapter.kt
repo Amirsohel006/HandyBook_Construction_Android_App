@@ -5,8 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.ui.showroom.ShowRoomAdapter
 
-class FurnitureAdapter :
+class FurnitureAdapter(val listener: ShowRoomAdapter.OnItemShowRoomListener) :
     RecyclerView.Adapter<FurnitureAdapter.CardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
@@ -18,6 +19,9 @@ class FurnitureAdapter :
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
         // Bind your data here
         //holder.cardTitle.text = items[position]
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(position)
+        }
     }
 
     override fun getItemCount(): Int = 4

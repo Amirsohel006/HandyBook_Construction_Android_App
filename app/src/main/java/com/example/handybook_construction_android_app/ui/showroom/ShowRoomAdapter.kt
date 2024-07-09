@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
 
-class ShowRoomAdapter : RecyclerView.Adapter<ShowRoomAdapter.ViewHolder>() {
+class ShowRoomAdapter(val listener: OnItemShowRoomListener) :
+    RecyclerView.Adapter<ShowRoomAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.ivShowRoomItemImage)
         val name: TextView = itemView.findViewById(R.id.tvShowRoomItemName)
@@ -26,8 +27,14 @@ class ShowRoomAdapter : RecyclerView.Adapter<ShowRoomAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ShowRoomAdapter.ViewHolder, position: Int) {
-//Done
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(position)
+        }
+
     }
 
     override fun getItemCount(): Int = 8
+    interface OnItemShowRoomListener {
+        fun onItemClick(position: Int)
+    }
 }

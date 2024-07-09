@@ -11,10 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handybook_construction_android_app.R
+import com.example.handybook_construction_android_app.ui.showroom.ShowRoomAdapter
 import com.example.handybook_construction_android_app.ui.showroom.ShowroomActivity
+import com.example.handybook_construction_android_app.ui.showroom_details.ShowroomDetailsActivity
 
 
-class Category_Fragment : Fragment() {
+class Category_Fragment : Fragment(), ShowRoomAdapter.OnItemShowRoomListener {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +30,7 @@ class Category_Fragment : Fragment() {
             recyclerView.layoutManager =
                 LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
             recyclerView.adapter =
-                com.example.handybook_construction_android_app.ui.category_fragment.FurnitureAdapter()
+                com.example.handybook_construction_android_app.ui.category_fragment.FurnitureAdapter(this@Category_Fragment)
 
 
             // Attach LinearSnapHelper
@@ -81,6 +83,10 @@ class Category_Fragment : Fragment() {
 
 
         }
+    }
+
+    override fun onItemClick(position: Int) {
+        startActivity(Intent(requireContext(), ShowroomDetailsActivity::class.java))
     }
 
 

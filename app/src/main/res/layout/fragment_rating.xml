@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.filterActivity.RatingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        style="@style/txtpoppinsemibold16"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Rating" />
 
-</FrameLayout>
+    <CheckBox
+        android:id="@+id/cbAnyRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Any Rating" />
+
+    <CheckBox
+        android:id="@+id/cb5Star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="5 Star Only" />
+
+    <CheckBox
+        android:id="@+id/cb4Star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="4 Star Only" />
+
+    <CheckBox
+        android:id="@+id/cb3Star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="3 Star Only" />
+</LinearLayout>

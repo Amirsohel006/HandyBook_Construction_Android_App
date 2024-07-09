@@ -73,6 +73,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/outlined_edittext"
         android:hint="Date"
+        android:editable="false"
         android:drawableStart="@drawable/icon_date_picker"
         android:drawableTint="@color/grey_900"
         android:drawablePadding="12dp"
